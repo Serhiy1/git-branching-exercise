@@ -1,0 +1,115 @@
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 1"
+[master bb23f7b] commit 1
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 2"
+[master d9289d8] commit 2
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git checkout fa3c3b
+Previous HEAD position was d9289d8 commit 2
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git branch "bug-fix"
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git checkout "bug-fix"
+Switched to branch 'bug-fix'
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md       
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 3"
+[bug-fix bfb4fb7] commit 3
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md       
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 4"
+[bug-fix 5ab0773] commit 4
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git checkout master 
+Switched to branch 'master'
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git merge bug-fix
+Auto-merging FILE.md
+CONFLICT (content): Merge conflict in FILE.md
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md 
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 5"        
+[master a82384d] commit 5
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git checkout bug-fix
+Switched to branch 'bug-fix'
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md       
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 6"
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git checkout 5ab0773c13b6e83e9498c8e3c307026fbd0808fa
+Note: switching to '5ab0773c13b6e83e9498c8e3c307026fbd0808fa'.
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+HEAD is now at 5ab0773 commit 4
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git branch bug-fix-experimental  
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git switch bug-fix-experimental
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 7"
+[bug-fix-experimental 4ecdb00] commit 7
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md       
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 8"
+[bug-fix-experimental 75d99c7] commit 8
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+
+S C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md 
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 9"      
+[bug-fix-experimental 3ec2057] commit 9
+ 1 file changed, 1 insertion(+)
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git switch master 
+Switched to branch 'master'
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md       
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 10"
+[master 3389e4f] commit 10
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git switch bug-fix
+Switched to branch 'bug-fix'
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git merge bug-fix-experimental
+Auto-merging FILE.md
+CONFLICT (content): Merge conflict in FILE.md
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 11"     
+[bug-fix 9e907af] commit 11
+
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md        
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 12"
+[bug-fix 9c84904] commit 12
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git switch master 
+Switched to branch 'master'
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git merge bug-fix 
+Auto-merging FILE.md
+CONFLICT (content): Merge conflict in FILE.md
+Automatic merge failed; fix conflicts and then commit the result.
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 13"
+
+
+[master a49affd] commit 13
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\FILE.md        
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git add .\commands.txt        
+PS C:\Users\serhi\OneDrive\Uni Docs\year 4\sp3\git-branching-exercise> git commit -m "commit 14"
+[master 3d98230] commit 14
+ 1 file changed, 2 insertions(+), 1 deletion(-)
